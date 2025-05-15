@@ -1,0 +1,221 @@
+/* Importing Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.semi-transparent-bg {
+  background-color: rgba(3, 3, 3, 0.5); /* black background with 50% opacity */
+  color: white;
+  padding: 30px;
+  border-radius: 5px;
+  font-family: "Khmer OS", "Mool", "Nokora", Khmer, sans-serif;
+
+}
+.ok{
+   background-color: rgba(3, 3, 3, 0.5); /* black background with 50% opacity */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Khmer OS", "Mool", "Nokora", Khmer, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #40b622;
+}
+
+header .navbar2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar2 {
+  display: flex;
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar2 input#menu-toggler {
+  display: none;
+}
+
+.navbar2 #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar2 .all-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar2 .all-links li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar2 .logo a {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  font-family: "Khmer OS", "Mool", "Nokora", Khmer, sans-serif;
+
+}
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+  font-family: "Khmer OS", "Mool", "Nokora", Khmer, sans-serif;
+}
+
+header a:hover, footer a:hover {
+  color: #ddd;
+}
+
+.hero-section {
+  height: 100vh;
+  background-image: url("home.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.hero-section .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  color: #fff;
+}
+
+.hero-section .content h2 {
+  font-size: 3rem;
+  max-width: 600px;
+  line-height: 70px;
+}
+
+.hero-section .content p {
+  font-weight: 300;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.hero-section .content button {
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 38px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.hero-section .content button:hover {
+  color: #fff;
+  background: #C06B3E;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+#hamburger-btn {
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .navbar2 .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar2 #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+
+  .navbar2 .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar2 #hamburger-btn {
+    display: block;
+  }
+  header {
+    padding: 10px;
+  }
+
+  header.show-mobile-menu::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+  }
+
+
+    
+  #hamburger-btn, #close-menu-btn {
+    display: block;
+  }
+
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content :is(h2, p) {
+    max-width: 100%;
+  }
+
+  .hero-section .content h2 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+  
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
